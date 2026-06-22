@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:8000/portofolio -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio AW Web Studio</title>
+
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020617;
+    color:white;
+    font-family:Arial,sans-serif;
+    overflow-x:hidden;
+}
+
+.portfolio{
+    padding:70px 8%;
+    background:
+    radial-gradient(circle at top right, rgba(37,99,235,.35), transparent 30%),
+    linear-gradient(135deg,#020617,#0f172a,#020617);
+}
+
+.back-btn{
+    display:inline-block;
+    margin-bottom:35px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:bold;
+    box-shadow:0 0 25px rgba(37,99,235,.5);
+}
+
+.brand{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.brand img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #38bdf8;
+    box-shadow:0 0 40px rgba(56,189,248,.6);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.section-title h2 span{
+    color:#38bdf8;
+}
+
+.section-title p{
+    color:#cbd5e1;
+    max-width:760px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.tech-box,
+.project-card{
+    background:rgba(15,23,42,.85);
+    border-radius:25px;
+    padding:32px;
+    margin-bottom:45px;
+    border:1px solid rgba(56,189,248,.25);
+    box-shadow:0 0 35px rgba(37,99,235,.18);
+}
+
+.tech-box h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.tech-box p,
+.project-desc{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.tech-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
+}
+
+.tech-list span{
+    background:rgba(37,99,235,.18);
+    border:1px solid rgba(56,189,248,.45);
+    color:#e0f2fe;
+    padding:10px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.project-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.project-header h3{
+    font-size:32px;
+}
+
+.project-header span{
+    background:rgba(56,189,248,.12);
+    border:1px solid rgba(56,189,248,.25);
+    color:#38bdf8;
+    padding:8px 15px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.sub-title{
+    font-size:30px;
+    margin:50px 0 25px;
+    color:#38bdf8;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+    margin-bottom:60px;
+}
+
+.gallery-item{
+    background:rgba(15,23,42,.9);
+    border-radius:24px;
+    padding:18px;
+    border:1px solid rgba(59,130,246,.3);
+    box-shadow:0 0 25px rgba(37,99,235,.18);
+    transition:.3s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-6px);
+}
+
+.gallery-item img{
+    width:100%;
+    height:300px;
+    object-fit:contain;
+    border-radius:16px;
+    background:#020617;
+}
+
+.gallery-item h4{
+    margin-top:15px;
+    color:#38bdf8;
+}
+
+.gallery-item p{
+    margin-top:8px;
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+/* CTA */
+
+.cta-box{
+    text-align:center;
+    background:rgba(15,23,42,.9);
+    border:1px solid rgba(56,189,248,.3);
+    border-radius:30px;
+    padding:60px 35px;
+    margin-top:70px;
+    box-shadow:0 0 45px rgba(37,99,235,.25);
+}
+
+.cta-box h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.cta-box h2 span{
+    color:#38bdf8;
+}
+
+.cta-box p{
+    color:#cbd5e1;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.service-tags{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:30px 0;
+}
+
+.service-tags span{
+    background:rgba(37,99,235,.18);
+    border:1px solid rgba(56,189,248,.4);
+    color:#e0f2fe;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.custom-text{
+    margin-top:15px;
+    font-size:18px;
+    color:#e2e8f0;
+}
+
+.cta-btn{
+    display:inline-block;
+    margin-top:30px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:bold;
+    box-shadow:0 0 35px rgba(37,99,235,.6);
+}
+
+@media(max-width:900px){
+
+    .portfolio{
+        padding:50px 6%;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .project-header h3{
+        font-size:26px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item img{
+        height:220px;
+    }
+
+    .brand img{
+        width:110px;
+        height:110px;
+    }
+
+    .cta-box h2{
+        font-size:30px;
+    }
+}
+</style>
+
+</head><body><section class="portfolio" id="portofolio">
+
+    
+    <div class="brand">
+        <img src="./portofolio_files/antonius-logo.jpeg" alt="AW Web Studio">
+    </div>
+
+    <div class="section-title">
+        <h2>Portofolio <span>AW Web Studio</span></h2>
+        <p>
+            Kumpulan project website yang saya desain dan kembangkan untuk kebutuhan
+            toko online, UMKM, fashion, jasa jahit, dan bisnis lokal.
+        </p>
+    </div>
+
+    <div class="tech-box">
+        <h3>Teknologi yang Saya Gunakan</h3>
+        <p>
+            Seluruh website dalam portofolio ini dikembangkan menggunakan Laravel,
+            PHP, MySQL, HTML, CSS, dan JavaScript dengan tampilan responsif yang
+            dapat digunakan pada desktop maupun perangkat mobile.
+        </p>
+
+        <div class="tech-list">
+            <span>Laravel</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Laragon</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Responsive Design</span>
+        </div>
+    </div>
+
+    <!-- AW STORE -->
+    <div class="project-card">
+        <div class="project-header">
+            <h3> AW Store</h3>
+            <span>E-Commerce Laravel</span>
+        </div>
+
+        <p class="project-desc">
+            AW Store merupakan website toko alat musik online yang memiliki fitur katalog produk,
+            keranjang belanja, checkout, riwayat pembelian, serta dashboard admin untuk mengelola
+            produk dan transaksi pelanggan.
+        </p>
+    </div>
+
+    <h2 class="sub-title">AW Store Admin Panel</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-admin-1.png">
+            <h4>Welcome Admin</h4>
+            <p>Halaman awal administrator sebelum masuk ke sistem pengelolaan website.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-admin-2.png">
+            <h4>Login Admin</h4>
+            <p>Sistem autentikasi untuk membatasi akses hanya kepada administrator.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-admin-3.png">
+            <h4>Kelola Produk</h4>
+            <p>Fitur CRUD untuk menambah, mengubah, melihat, dan menghapus produk toko.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-admin-4.png">
+            <h4>Riwayat Transaksi</h4>
+            <p>Menampilkan data Profil Admin.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-admin-5.png">
+            <h4>Profil Admin</h4>
+           <p>Menampilkan data Profil Admin, Admin Dapat Mengubah Nama Email, Nama Admin, dan Mengubah Serta Mereset Password.</p>
+        </div>
+    </div>
+    <h2 class="sub-title">AW Store - Halaman Pembeli</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-pembeli-1.png">
+            <h4>Beranda AW Store</h4>
+            <p>Halaman utama toko online dengan tampilan modern dan navigasi sederhana.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-pembeli-2.png">
+            <h4>Katalog Produk</h4>
+            <p>Menampilkan produk gitar lengkap dengan harga, stok, rating, dan tombol pembelian.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-pembeli-3.png">
+            <h4>Keranjang Belanja</h4>
+            <p>Memudahkan pelanggan melihat produk yang dipilih sebelum melakukan checkout.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-pembeli-4.png">
+            <h4>Tentang Kami</h4>
+            <p>Berisi Informasi Toko, Layanan, dan kontak Bisnis Yang Dapat Dihubungi Pelanggan</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/aw-pembeli-5.png">
+            <h4>Riwayat Pembelian</h4>
+            <p>Menampilkan Daftar Transaksi Barang Yang Pernah Dilakukan Oleh Pelanggan</p>
+        </div>
+    </div>
+
+    <!-- KORNELIA JAHIT -->
+    <div class="project-card">
+        <div class="project-header">
+            <h3> Kornelia Jahit</h3>
+            <span>Jasa Jahit Online</span>
+        </div>
+
+        <p class="project-desc">
+            Kornelia Jahit adalah website promosi jasa jahit yang menampilkan informasi layanan,
+            hasil jahitan, lokasi, kontak pemesanan, serta dashboard admin untuk mengelola data.
+        </p>
+    </div>
+
+    <h2 class="sub-title">Kornelia Jahit - Halaman Promosi</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="./portofolio_files/halaman-promosi-kornelia-1.png">
+            <h4>Beranda Kornelia Jahit</h4>
+            <p>Halaman utama yang memperkenalkan layanan jahit kepada pelanggan.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/halaman-promosi-kornelia-2.png">
+            <h4>Katalog Hasil Jahitan</h4>
+            <p>Menampilkan contoh hasil jahitan dan produk yang pernah dikerjakan.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/halaman-promosi-kornelia-3.png">
+            <h4>Layanan Jahit</h4>
+            <p>Berisi informasi layanan jahit pakaian, seragam, dan kebutuhan konveksi.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/halaman-promosi-kornelia-4.png">
+            <h4>Lokasi</h4>
+            <p>Memudahkan pelanggan menemukan lokasi usaha dan melakukan pemesanan.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/halaman-promosi-kornelia-5.png">
+            <h4>Lokasi &amp; Kontak</h4>
+            <p>Memudahkan Pelanggan Berkonsultasi Dengan Pemilik Usaha.</p>
+        </div>
+    </div>
+
+    <h2 class="sub-title">Kornelia Jahit Admin Panel</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="./portofolio_files/kornelia-admin-2 (1).png">
+            <h4>Dashboard Admin</h4>
+            <p>Halaman utama administrator untuk mengelola data website.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/kornelia-admin-2 (2).png">
+            <h4>Login Admin</h4>
+            <p>Sistem keamanan untuk membatasi akses ke halaman administrator.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/kornelia-admin-3.png">
+            <h4>Kelola Layanan</h4>
+            <p>Mengelola daftar layanan/Manipulasi Data.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/kornelia-admin-4.png">
+            <h4>Kelola Galeri</h4>
+            <p>Kelola Hasil Galeri Hasil Jahitan</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/kornelia-admin-5.png">
+            <h4>Pengaturan Website</h4>
+            <p>Mengelola informasi usaha, kontak, dan tampilan website.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/kornelia-admin-6.png">
+            <h4>Kelola Pesan User</h4>
+            <p>Menampilkan semua pesan user.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./portofolio_files/kornelia-admin-7.png">
+            <h4>Balas Pesan User</h4>
+            <p>Form admin untuk membalas pesan pelanggan.</p>
+        </div>
+    </div>
+
+    <div class="cta-box">
+    <h2>Ingin Membuat Website Seperti Ini?</h2>
+
+    <p>
+        AW Web Studio menerima pembuatan website UMKM, toko online,
+        company profile, jasa jahit, dan berbagai website bisnis lainnya.
+    </p>
+
+    <div class="service-tags">
+        <span>UMKM</span>
+        <span>E-Commerce</span>
+        <span>Company Profile</span>
+        <span>Landing Page</span>
+        <span>Custom Website</span>
+    </div>
+
+    <p class="custom-text">
+        Website dapat dibuat sesuai kebutuhan dan keinginan bisnis Anda,
+        mulai dari landing page, company profile, toko online,
+        hingga sistem website custom.
+    </p>
+
+    <a href="https://wa.me/6281237742620" class="cta-btn">
+        Konsultasi Gratis
+    </a>
+    <a href="http://127.0.0.1:8000/" class="back-btn"> Kembali ke Beranda</a>
+
+</div></section></body></html>

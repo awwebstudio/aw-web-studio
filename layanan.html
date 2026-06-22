@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:8000/layanan -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layanan - AW Web Studio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(37,99,235,.35), transparent 30%),
+        linear-gradient(135deg,#020617,#0f172a,#020617);
+    color:white;
+    min-height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 0;
+}
+
+.logo-box{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo-box img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #38bdf8;
+    box-shadow:0 0 35px rgba(56,189,248,.6);
+}
+
+h1{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+h1 span{
+    color:#38bdf8;
+}
+
+.desc{
+    text-align:center;
+    color:#cbd5e1;
+    max-width:760px;
+    margin:0 auto 55px;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+}
+
+.card{
+    background:rgba(15,23,42,.88);
+    padding:32px;
+    border-radius:24px;
+    border:1px solid rgba(56,189,248,.28);
+    box-shadow:0 0 28px rgba(37,99,235,.18);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 45px rgba(56,189,248,.28);
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.price{
+    display:inline-block;
+    margin-top:8px;
+    color:#e0f2fe;
+    background:rgba(37,99,235,.18);
+    border:1px solid rgba(56,189,248,.4);
+    padding:9px 14px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+.detail-box{
+    background:rgba(15,23,42,.88);
+    border:1px solid rgba(56,189,248,.28);
+    border-radius:28px;
+    padding:38px;
+    margin-top:55px;
+    text-align:center;
+    box-shadow:0 0 35px rgba(37,99,235,.2);
+}
+
+.detail-box h2{
+    color:#38bdf8;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+.detail-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.detail-list span{
+    padding:10px 16px;
+    border-radius:25px;
+    background:rgba(37,99,235,.18);
+    border:1px solid rgba(56,189,248,.4);
+    color:#e0f2fe;
+    font-weight:bold;
+}
+
+.note{
+    text-align:center;
+    color:#94a3b8;
+    margin-top:25px;
+    line-height:1.7;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:45px;
+}
+
+.btn{
+    display:inline-block;
+    min-width:220px;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    padding:15px 25px;
+    border-radius:35px;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    box-shadow:0 0 30px rgba(37,99,235,.55);
+}
+
+.btn-secondary{
+    border:1px solid #38bdf8;
+}
+
+@media(max-width:900px){
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    .container{
+        padding:50px 0;
+    }
+
+    .card{
+        padding:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo-box">
+        <img src="./layanan_files/antonius-logo.jpeg" alt="AW Web Studio">
+    </div>
+
+    <h1>Layanan <span>AW Web Studio</span></h1>
+
+    <p class="desc">
+        AW Web Studio membantu UMKM, bisnis lokal, toko online, dan usaha jasa
+        memiliki website profesional yang modern, responsif, mudah digunakan,
+        dan dapat disesuaikan dengan kebutuhan bisnis.
+    </p>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Landing Page</h3>
+            <p>
+                Website satu halaman untuk promosi produk, jasa, event,
+                campaign, atau personal branding.
+            </p>
+            <span class="price">Mulai Rp300.000</span>
+        </div>
+
+        <div class="card">
+            <h3>Company Profile</h3>
+            <p>
+                Website profil usaha lengkap dengan informasi bisnis,
+                layanan, galeri, lokasi, dan kontak.
+            </p>
+            <span class="price">Mulai Rp500.000</span>
+        </div>
+
+        <div class="card">
+            <h3>Toko Online</h3>
+            <p>
+                Website e-commerce dengan katalog produk, keranjang belanja,
+                checkout, dan dashboard admin.
+            </p>
+            <span class="price">Mulai Rp1.000.000</span>
+        </div>
+
+        <div class="card">
+            <h3>Website UMKM</h3>
+            <p>
+                Solusi website untuk usaha kecil agar tampil lebih profesional
+                dan mudah ditemukan pelanggan.
+            </p>
+            <span class="price">Mulai Rp700.000</span>
+        </div>
+
+        <div class="card">
+            <h3>Website Jasa</h3>
+            <p>
+                Cocok untuk jasa jahit, bengkel, kursus, percetakan,
+                laundry, dan bisnis layanan lainnya.
+            </p>
+            <span class="price">Mulai Rp500.000</span>
+        </div>
+
+        <div class="card">
+            <h3>Custom Website</h3>
+            <p>
+                Website dibuat sesuai kebutuhan, konsep, fitur,
+                dan tujuan bisnis yang Anda inginkan.
+            </p>
+            <span class="price">Harga menyesuaikan</span>
+        </div>
+
+        <div class="card">
+            <h3>Joki Tugas Kuliah</h3>
+            <p>
+                Membantu pembuatan makalah, proposal bisnis,
+                presentasi PowerPoint, website tugas kuliah,
+                dan berbagai project akademik lainnya.
+            </p>
+            <span class="price">Mulai Rp50.000</span>
+        </div>
+
+    </div>
+
+    <div class="detail-box">
+        <h2>Apa Saja yang Didapat?</h2>
+
+        <div class="detail-list">
+            <span>Desain Modern</span>
+            <span>Responsive HP &amp; Laptop</span>
+            <span>Database MySQL</span>
+            <span>Dashboard Admin</span>
+            <span>Tombol WhatsApp</span>
+            <span>Upload Gambar</span>
+            <span>Revisi Tampilan</span>
+            <span>Bantuan Hosting</span>
+        </div>
+
+        <p class="note">
+            Harga dapat menyesuaikan tingkat kesulitan,
+            jumlah halaman, dan fitur tambahan yang dibutuhkan.
+        </p>
+    </div>
+
+    <div class="buttons">
+        <a href="https://wa.me/6281237742620" class="btn btn-primary">
+            Konsultasi Gratis
+        </a>
+
+        <a href="http://127.0.0.1:8000/" class="btn btn-secondary">
+            Kembali ke Beranda
+        </a>
+    </div>
+
+</div>
+
+
+</body></html>
