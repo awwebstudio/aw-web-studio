@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8000/ -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AW Web Studio</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #020617;
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background:
+        radial-gradient(circle at 75% 35%, rgba(37, 99, 235, 0.65), transparent 32%),
+        radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.25), transparent 28%),
+        linear-gradient(135deg, #020617 0%, #0f172a 45%, #020617 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 45px 45px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+    pointer-events: none;
+}
+
+.hero-left,
+.hero-right {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-left {
+    max-width: 650px;
+}
+
+.logo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.8),
+        0 0 70px rgba(37, 99, 235, 0.45);
+    margin-bottom: 30px;
+    animation: logoGlow 3s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 25px rgba(56, 189, 248, 0.6),
+            0 0 60px rgba(37, 99, 235, 0.35);
+    }
+    50% {
+        box-shadow:
+            0 0 40px rgba(56, 189, 248, 1),
+            0 0 100px rgba(37, 99, 235, 0.7);
+    }
+}
+
+.tagline {
+    color: #38bdf8;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 22px;
+    font-weight: bold;
+    text-shadow: 0 0 18px rgba(56, 189, 248, 0.75);
+}
+
+h1 {
+    font-size: 68px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+h1 span {
+    color: #38bdf8;
+    text-shadow:
+        0 0 12px rgba(56, 189, 248, 0.9),
+        0 0 30px rgba(37, 99, 235, 0.6);
+}
+
+.desc {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 38px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:35px;
+    align-items:center;
+}
+
+.buttons a{
+    width:220px;
+    text-align:center;
+    display:inline-block;
+    text-decoration:none;
+    padding:15px 0;
+    border-radius:40px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: white;
+    box-shadow: 0 0 35px rgba(37, 99, 235, 0.8);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 55px rgba(56, 189, 248, 0.9);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(56, 189, 248, 0.8);
+    color: white;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(10px);
+}
+
+.layanan-btn{
+    width:180px;
+    margin-top:20px;
+    display:inline-block;
+    text-align:center;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+    background: rgba(56, 189, 248, 0.12);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mockup {
+    width: 460px;
+    min-height: 310px;
+    border-radius: 30px;
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    box-shadow:
+        0 0 45px rgba(37, 99, 235, 0.45),
+        inset 0 0 35px rgba(56, 189, 248, 0.08);
+    padding: 32px;
+    transform: rotate(-3deg);
+    backdrop-filter: blur(18px);
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0%, 100% {
+        transform: rotate(-3deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-3deg) translateY(-14px);
+    }
+}
+
+.mockup-top {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 35px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #38bdf8;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.9);
+}
+
+.mockup h3 {
+    font-size: 40px;
+    line-height: 1.12;
+    margin-bottom: 18px;
+}
+
+.mockup h3 span {
+    color: #38bdf8;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
+}
+
+.mockup p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #cbd5e1;
+    font-size: 14px;
+    z-index: 3;
+    animation: scrollMove 1.6s ease-in-out infinite;
+}
+
+@keyframes scrollMove {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateX(-50%) translateY(8px);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 6%;
+    }
+
+    .logo {
+        width: 145px;
+        height: 145px;
+    }
+
+    h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .buttons a {
+        margin-bottom: 12px;
+    }
+
+    .mockup {
+        width: 100%;
+        max-width: 360px;
+        min-height: auto;
+        transform: rotate(0);
+    }
+
+    @keyframes floatCard {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-12px);
+        }
+    }
+}
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+
+        <div class="hero-left">
+            <img src="./index_files/antonius-logo.jpeg" class="logo" alt="AW Logo">
+
+            <p class="tagline">SOLUSI WEBSITE UNTUK BISNIS ANDA</p>
+
+            <h1>
+                Website Modern untuk
+                <span>UMKM</span> dan
+                <span>Bisnis Lokal</span>
+            </h1>
+
+            <p class="desc">
+                Saya membantu UMKM, toko online, fashion, dan bisnis lokal memiliki website profesional yang modern, responsif, dan dipercaya Pelanggan.
+            </p>
+
+            <div class="buttons">
+    <a href="https://wa.me/6281237742620" class="btn-primary">Hubungi Saya</a>
+
+    <a href="http://127.0.0.1:8000/portofolio" class="btn-secondary">
+        Lihat Portofolio
+    </a>
+
+    <a href="http://127.0.0.1:8000/tentang" class="btn-secondary">
+        Tentang Saya
+    </a>
+
+    <a href="http://127.0.0.1:8000/layanan" class="btn-secondary layanan-btn">
+    Layanan
+</a>
+</div>
+        </div>
+
+        <div class="hero-right">
+        <div class="mockup">
+        <div class="mockup-top">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+<h3>Website untuk <span>UMKM Modern</span></h3>
+
+<p>
+Membantu UMKM dan bisnis lokal tampil lebih profesional,
+terpercaya, dan mudah ditemukan pelanggan secara online.
+</p>
+            </div>
+        </div>
+
+
+    </section>
+
+
+</body></html>
